@@ -1,0 +1,276 @@
+$header-text-color: #324049;
+$text-color: #898989;
+
+$breakpoint-high: 1700px;
+$breakpoint-overmid: 1200px;
+$breakpoint-mid: 1000px;
+$breakpoint-overlow: 700px;
+$breakpoint-low: 600px;
+$breakpoint-mobile: 400px;
+
+.navigation {
+    background: linear-gradient(0deg, rgba(109, 143, 170, 1) 0%, rgba(91, 119, 143, 1) 100%);
+}
+
+.container {
+    width: 60%;
+    margin: 2em auto;
+
+    @media (max-width: $breakpoint-high) {
+        width: 80%;
+    }
+
+    @media (max-width: $breakpoint-overmid) {
+        width: 90%;
+    }
+
+    .breadcrumb {
+        background-color: white;
+        border: 1px solid #eaeaea;
+
+        padding: 1em;
+
+        ul {
+            li {
+                display: inline-block;
+                margin: 0 .5em;
+                color: $text-color;
+            }
+        }
+    }
+
+    .title {
+        position: relative;
+        margin-top: 2em;
+
+        h3 {
+            font-size: 36px;
+            font-family: 'Open Sans', sans-serif !important;
+            color: $header-text-color;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif !important;
+            color: $text-color;
+        }
+
+        .like {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 1px solid #617685;
+            margin: 1em 0;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: .5em 2em;
+            align-items: center;
+            justify-self: center;
+
+            @media (max-width: $breakpoint-low) {
+                position: unset;
+                width: 120px;
+            }
+
+            span {
+                color: #ffaaaa;
+            }
+        }
+
+    }
+
+    .description {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+        margin-top: 2em;
+
+        @media (max-width: $breakpoint-mid) {
+            display: block;
+        }
+
+        .info {
+            figure {
+                width: 20%;
+                float: left;
+                margin-right: 4em;
+
+                @media (max-width: $breakpoint-mid) {
+                    float: none;
+                    width: 100%;
+                }
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+
+                    @media (max-width: $breakpoint-mid) {
+                        width: 100%;
+                        padding-right: 2em;
+                    }
+                }
+            }
+
+            p {
+                color: $text-color;
+                margin: 0 2em 0 0;
+            }
+        }
+
+        .ingredients {
+            h2 {
+                margin: 0 0 1em 0;
+                font-size: 20px;
+                font-family: 'Open Sans', sans-serif !important;
+                color: $header-text-color;
+            }
+
+            ul {
+                li {
+                    background-color: white;
+                    border: 1px solid #eaeaea;
+                    list-style: none;
+                    padding: 1em;
+                    color: $text-color;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.comment {
+    margin-top: 2em;
+
+    header {
+        background-color: white;
+        border: 1px solid #eaeaea;
+
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr 20%;
+
+        h3 {
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif !important;
+            color: $header-text-color;
+        }
+
+        .comments {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-self: end;
+            color: $text-color;
+
+            span {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .textarea {
+        position: relative;
+        width: 100%;
+        background-color: white;
+        border: 1px solid #eaeaea;
+        margin-top: 1em;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 1em;
+            transform: translateY(-50%);
+        }
+
+        input {
+            width: 100%;
+            padding: 1em 1em 1em 4em;
+            background-color: white;
+            border: none;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 1em 2em;
+            background-color: #617685;
+            border: none;
+            color: white;
+            font-weight: lighter;
+        }
+    }
+
+    .comments {
+        p {
+            margin-right: .5em;
+        }
+    }
+
+
+    .messages {
+        article {
+            background-color: white;
+            border: 1px solid #eaeaea;
+            margin: 1em 0;
+            padding: 1em;
+
+
+
+            h4 {
+                font-family: 'Open Sans', sans-serif !important;
+                margin-bottom: 1em;
+                color: $header-text-color;
+                font-weight: regular;
+
+            }
+
+            p {
+                color: $text-color;
+            }
+
+            .editText {
+                width: 100%;
+                padding: .5em;
+            }
+
+            .editButton {
+                padding: .5em;
+            }
+
+            &:hover span {
+                opacity: 1 !important;
+            }
+
+            .mine {
+                position: relative;
+
+                .you {
+                    font-weight: bold;
+                    color: #5b778f !important;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    transition: opacity 200ms ease-in-out;
+                    cursor: pointer;
+                }
+
+                #edit {
+                    right: 2em;
+                }
+
+                #delete {
+                    right: 0em;
+                }
+
+            }
+        }
+    }
+}

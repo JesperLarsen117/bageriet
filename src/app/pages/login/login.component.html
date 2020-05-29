@@ -1,0 +1,13 @@
+<header class="navigation">
+    <app-navigation></app-navigation>
+</header>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <label class="username-label" for="username">Brugernavn</label>
+    <input (focus)="focus()" type="text" name="username" id="username" formControlName="username" />
+    <label class="password-label" for="password">Kodeord</label>
+    <input (focus)="focus()" type="password" name="password" id="password" formControlName="password" />
+    <button type="login">Login</button>
+</form>
+
+<app-footer></app-footer>

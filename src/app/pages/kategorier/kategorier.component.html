@@ -1,0 +1,25 @@
+<header class="navigation">
+    <app-navigation></app-navigation>
+</header>
+
+<main class="container">
+    <header>
+        <h2>Vores elskede bagværk</h2>
+        <p>Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når
+            nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud</p>
+    </header>
+    <section class="product-container">
+        <section class="categories">
+            <ul>
+                <li (click)="sortProduct($event, '1')">Rundstykker</li>
+                <li (click)="sortProduct($event, '2')">Baguettes</li>
+                <li (click)="sortProduct($event, '3')">Franskbrød</li>
+                <li (click)="sortProduct($event, '4')">Kager</li>
+                <li (click)="sortProduct($event, '5')">Rugbrød</li>
+            </ul>
+        </section>
+        <section class="products" id="products">
+        </section>
+    </section>
+</main>
+<app-footer></app-footer>

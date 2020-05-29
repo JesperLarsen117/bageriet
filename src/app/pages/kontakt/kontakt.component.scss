@@ -1,0 +1,108 @@
+$header-text-color: #324049;
+$text-color: #898989;
+
+$breakpoint-high: 1700px;
+$breakpoint-overmid: 1200px;
+$breakpoint-mid: 1000px;
+$breakpoint-overlow: 700px;
+$breakpoint-low: 600px;
+$breakpoint-mobile: 400px;
+
+.navigation {
+    background: linear-gradient(0deg, rgba(109, 143, 170, 1) 0%, rgba(91, 119, 143, 1) 100%);
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto 10em auto;
+
+    @media (max-width: $breakpoint-high) {
+        width: 80%;
+    }
+
+    @media (max-width: $breakpoint-overmid) {
+        width: 90%;
+    }
+
+    header {
+        margin: 8em;
+
+        h1 {
+            text-align: center;
+            color: $header-text-color;
+            font-size: 32px;
+        }
+
+        p {
+            width: 80%;
+            margin: 2em auto;
+            text-align: center;
+            color: $text-color;
+            font-size: 12px;
+        }
+    }
+
+    .contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+
+        @media (max-width: $breakpoint-mid) {
+            display: block;
+        }
+
+        form {
+
+            input,
+            textarea {
+                width: 100%;
+                display: block;
+                padding: 1em;
+                background-color: white;
+                border: 1px solid $text-color;
+                margin-bottom: .5em;
+            }
+
+            textarea {
+                height: 307px;
+            }
+
+            button {
+                float: right;
+                padding: .5em 2em;
+                background-color: #617685;
+                color: white;
+                border: none;
+            }
+        }
+
+        article {
+            @media (max-width: $breakpoint-overmid) {
+                margin-top: 5em;
+            }
+
+            p {
+                font-weight: 100;
+                color: $text-color;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            figure {
+                margin-top: 1em;
+
+                @media (max-width: $breakpoint-mid) {
+                    width: 100%;
+                }
+
+                img {
+                    @media (max-width: $breakpoint-overmid) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

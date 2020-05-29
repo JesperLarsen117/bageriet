@@ -1,0 +1,365 @@
+$header-text-color: #324049;
+$text-color: #898989;
+
+// breakpoints
+$breakpoint-overmid: 1200px;
+$breakpoint-mid: 1000px;
+$breakpoint-overlow: 700px;
+$breakpoint-low: 600px;
+$breakpoint-mobile: 400px;
+
+
+.hero {
+    position: relative;
+    height: 80vh;
+    z-index: 1;
+
+
+    .image-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 80vh;
+
+        .slider {
+            height: 80vh;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100vw;
+
+            figure {
+                position: relative;
+                width: 100%;
+                flex-shrink: 0;
+
+                height: 100%;
+                transition: all 500ms ease-in-out;
+
+                img {
+                    background-size: contain;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            color: white;
+            font-size: 84px;
+
+            @media (max-width: $breakpoint-mid) {
+                font-size: 40px;
+            }
+        }
+
+        .slider-points {
+            position: absolute;
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+
+            .point {
+                &:first-child {
+                    opacity: 1;
+                }
+
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: white;
+                margin: .5em;
+                opacity: .5;
+            }
+        }
+
+    }
+
+    #button_left {
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: .5em;
+        color: white;
+        font-size: 4em;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #button_right {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        padding: .5em;
+        color: white;
+        font-size: 4em;
+        cursor: pointer;
+        user-select: none;
+
+    }
+}
+
+.attention {
+    width: 60%;
+    margin: 8em auto;
+
+    @media (max-width: $breakpoint-mid) {
+        width: 80%;
+    }
+
+    h2 {
+        text-align: center;
+        color: $header-text-color;
+        font-size: 32px;
+    }
+
+    p {
+        width: 80%;
+        margin: 2em auto;
+        text-align: center;
+        color: $text-color;
+        font-size: 12px;
+
+    }
+
+    .interests {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6em;
+        margin-top: 4em;
+
+        @media (max-width: $breakpoint-mid) {
+            gap: 2em;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+
+        article {
+            figure {
+                padding: 3em;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            h3 {
+                align-self: center;
+                font-family: 'Open Sans', sans-serif !important;
+                text-align: center;
+                color: $header-text-color;
+                height: 50px;
+                overflow: hidden;
+                /*The problematic part is below*/
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                white-space: normal;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            p {
+                line-height: 2em;
+                color: text-color;
+                font-size: 12px;
+                height: 70px;
+                overflow: hidden;
+                /*The problematic part is below*/
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                white-space: normal;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+
+            }
+        }
+
+    }
+}
+
+.newsletter {
+    padding: 10em 20%;
+    background-image: url(../../../assets/images/newsletterbg.jpg);
+    background-size: cover;
+    width: 100%;
+    min-height: 550px;
+    color: white;
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 10em 5%;
+    }
+
+    header {
+
+        h3 {
+            font-size: 36px;
+        }
+
+        p {
+            font-weight: 100;
+            font-size: 12px;
+
+        }
+    }
+
+    form {
+        margin: 4em 0;
+        position: relative;
+        width: 100%;
+
+        span {
+            position: absolute;
+            background-color: #bbc8d4;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: .5em;
+        }
+
+        #newsletter {
+            padding: 1em 6em 1em 5em;
+            width: 100%;
+            border: none;
+        }
+
+        #submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1em 2em;
+            background-color: #617685;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+.product {
+    width: 60%;
+    margin: 8em auto;
+
+    @media (max-width: $breakpoint-overmid) {
+        width: 90%;
+    }
+
+    header {
+
+        h2 {
+            text-align: center;
+            color: $header-text-color;
+            font-size: 32px;
+        }
+
+        p {
+            width: 80%;
+            margin: 2em auto;
+            text-align: center;
+            color: $text-color;
+            font-size: 12px;
+        }
+    }
+
+    .product-section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6em;
+        margin-top: 2em;
+
+        @media (max-width: $breakpoint-mid) {
+            gap: 1em;
+        }
+
+        @media (max-width: $breakpoint-overlow) {
+            gap: 2em;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $breakpoint-low) {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        article {
+            figure {
+                width: 100%;
+
+                @media (max-width: $breakpoint-low) {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .comments {
+                width: 20%;
+                margin: 0 auto;
+                text-align: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+
+                p,
+                span {
+                    margin: .2em;
+                    color: #c0c0c0;
+                }
+            }
+
+            h3 {
+                text-align: center;
+                margin: 1em 0;
+                font-family: 'Open Sans', sans-serif !important;
+            }
+
+            p {
+                line-height: 2em;
+                color: $text-color;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: .5em;
+                margin-top: 1em;
+                color: $text-color;
+                text-decoration: none;
+                border: 1px solid $text-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<header class="navigation">
+    <app-navigation></app-navigation>
+</header>
+<main class="container">
+    <section class="breadcrumb">
+        <ul>
+            <li>Produkter</li>
+            <li>></li>
+            <li>Håndværker</li>
+        </ul>
+    </section>
+    <header class="title">
+        <div class="title-section">
+            <h3>{{singleData.title}}</h3>
+            <h4>This is missing</h4>
+        </div>
+        <div class="like">
+            <p>LIKE!</p>
+            <span class="material-icons">
+                favorite_border
+            </span>
+        </div>
+    </header>
+    <section class="description">
+        <div class="info">
+            <figure><img *ngIf="singleData.image" src="{{singleData.image.fullpath}}" alt=""></figure>
+            <p>{{singleData.description}}</p>
+        </div>
+        <div class="ingredients">
+            <h2>Ingredienser</h2>
+            <ul>
+                <li  *ngFor="let item of singleData.ingredients">
+                  {{item.amount}} {{item.unit_abbr}}.{{item.ingredient_title}}
+                  </li>
+            </ul>
+        </div>
+    </section>
+    <section class="comment">
+        <header>
+            <h3>Kommentar</h3>
+            <div class="comments">
+                <p>{{comments.count}}</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+        </header>
+        <form [formGroup]="comment" (ngSubmit)="onSubmit()" class="textarea">
+            <span class="material-icons">
+                edit
+            </span>
+            <input type="text" name="message" id="message" formControlName="message" />
+            <button type="submit">Indsæt</button>
+        </form>
+        <section class="messages">
+
+            <article *ngFor="let item of comments.posts">
+                <div *ngIf="item.user_id === userId" class="mine">
+                    <h4 class="you">You</h4>
+                    <span (click)="editComment(item.comment, item.id)" id="edit" class="material-icons">
+                        edit
+                    </span>
+                    <span (click)="deleteComment(item.id)" id="delete" class="material-icons">
+                        delete_forever
+                    </span>
+                </div>
+                <div *ngIf="item.user_id != userId">
+                <h4 item>{{item.title}}</h4>
+              </div>
+                <p>{{item.comment}}</p>
+            </article>
+        </section>
+    </section>
+</main>
+<app-footer></app-footer>

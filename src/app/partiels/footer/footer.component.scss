@@ -1,0 +1,48 @@
+$breakpoint-low: 700px;
+
+footer {
+    position: relative;
+    margin: 2em 0 0 0;
+    width: 100%;
+    background-color: #333333;
+
+    span {
+        position: absolute;
+        top: -1em;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: .5em;
+        font-size: 2em;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #252525;
+    }
+
+    h3 {
+        padding: 1em;
+        color: white;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        color: #818181;
+        width: 30%;
+        margin: 0 auto;
+
+        @media (max-width: $breakpoint-low) {
+            width: 80%;
+        }
+    }
+
+    .copyright {
+        margin-top: 2em;
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+        background-color: #252525;
+    }
+}

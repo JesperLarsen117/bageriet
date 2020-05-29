@@ -1,0 +1,13 @@
+<nav id="top">
+    <ul>
+        <li><a href="/forside">Forside</a></li>
+        <li><a href="/kategorier">Produkter</a></li>
+    </ul>
+    <h2>Bageriet</h2>
+    <ul>
+        <li><a href="/kontakt">Kontakt</a></li>
+        <li *ngIf="checkLogin"><a id="userAction" href="/login">Login</a></li>
+        <li *ngIf="!checkLogin"><a id="userAction" (click)="logout()" href="/login">Logout</a></li>
+
+    </ul>
+</nav>

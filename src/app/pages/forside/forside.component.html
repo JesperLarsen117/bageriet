@@ -1,0 +1,192 @@
+<header class="hero">
+    <app-navigation></app-navigation>
+    <section class="image-slider">
+        <h1>Vi elsker at lave brød</h1>
+        <div class="slider">
+            <figure>
+                <img src="../../../assets/images/slide1.jpg" alt="brød">
+            </figure>
+            <figure>
+                <img src="../../../assets/images/slide2.jpg" alt="brød">
+            </figure>
+            <figure>
+                <img src="../../../assets/images/slide3.jpg" alt="brød">
+            </figure>
+        </div>
+        <span class="material-icons" id="button_left">
+            keyboard_arrow_left
+        </span>
+        <span class="material-icons" id="button_right">
+            keyboard_arrow_right
+        </span>
+        <div class="slider-points" id="points">
+
+        </div>
+    </section>
+</header>
+<section class="attention">
+    <header>
+        <h2 class="title">Vi skaber lækkert! brød</h2>
+        <p class="subTitle">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået
+            forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud</p>
+    </header>
+    <div class="interests">
+        <article *ngFor="let news of data.news | slice:0:3">
+            <figure>
+                <img src="../../../assets/images/brød/article.jpg" alt="brød">
+            </figure>
+            <h3>{{news.title}}</h3>
+            <p>{{news.teaser}}</p>
+        </article>
+    </div>
+</section>
+<section class="newsletter">
+    <header>
+        <h3>Tilmeld dig vores nyhedsbrev</h3>
+        <p>Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver</p>
+    </header>
+    <form [formGroup]="form">
+        <span class="material-icons">
+            mail_outline
+        </span>
+        <input type="text" name="newsletter" id="newsletter">
+        <input type="submit" value="Tilmeld" id="submit">
+    </form>
+</section>
+<section class="product">
+    <header>
+        <h2 class="title">Nyeste bagværk</h2>
+        <p class="subTitle">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået
+            forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud</p>
+    </header>
+    <div class="product-section">
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/1.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/2.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/3.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/4.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/5.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/6.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/7.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+        <article>
+            <figure>
+                <img src="../../../assets/images/brød/8.png" alt="brød">
+            </figure>
+            <div class="comments">
+                <p>23</p>
+                <span class="material-icons">
+                    message
+                </span>
+            </div>
+            <h3>HÅNDVÆRKER</h3>
+
+            <p class="product-description">Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har
+                gennemgået...</p>
+            <a href="#">Se mere</a>
+        </article>
+    </div>
+</section>
+<app-footer></app-footer>
